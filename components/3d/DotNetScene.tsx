@@ -22,7 +22,7 @@ function DotNetLogo() {
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
       <group ref={groupRef}>
-        {/* Central cube representing .NET Core */}\n        <Box args={[1.5, 1.5, 1.5]}>
+        {/* Central cube representing .NET Core */}        <Box args={[1.5, 1.5, 1.5]}>
           <meshStandardMaterial
             color=\"#512BD4\"
             emissive=\"#512BD4\"
@@ -32,7 +32,7 @@ function DotNetLogo() {
           />
         </Box>
         
-        {/* Orbital ring */}\n        <Torus ref={torusRef} args={[2.5, 0.1, 16, 100]} rotation={[Math.PI / 2, 0, 0]}>
+        {/* Orbital ring */}        <Torus ref={torusRef} args={[2.5, 0.1, 16, 100]} rotation={[Math.PI / 2, 0, 0]}>
           <meshStandardMaterial
             color=\"#0078D4\"
             emissive=\"#0078D4\"
@@ -42,7 +42,7 @@ function DotNetLogo() {
           />
         </Torus>
         
-        {/* Small orbiting spheres */}\n        {[0, 1, 2, 3].map((i) => (
+        {/* Small orbiting spheres */}        {[0, 1, 2, 3].map((i) => (
           <mesh
             key={i}
             position={[
