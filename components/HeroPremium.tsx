@@ -205,7 +205,7 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
               Resume
             </motion.a>
           </motion.div>
-
+        </div>
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
