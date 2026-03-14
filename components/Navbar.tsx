@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -112,18 +112,6 @@ export default function Navbar() {
                   Resume
                 </motion.a>
                 
-                <motion.a
-                  href="#contact"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.7 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-6 py-2.5 bg-gradient-to-r from-accent-500 to-primary-500 text-white rounded-lg font-medium shadow-lg shadow-accent-500/30 hover:shadow-accent-500/50 transition-all duration-300 flex items-center gap-2"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  Let's Talk
-                </motion.a>
               </div>
             </div>
 
@@ -202,17 +190,6 @@ export default function Navbar() {
                     Download Resume
                   </motion.a>
                   
-                  <motion.a
-                    href="#contact"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-accent-500 to-primary-500 text-white rounded-lg font-medium shadow-lg shadow-accent-500/30 flex items-center justify-center gap-2"
-                  >
-                    <Sparkles className="w-4 h-4" />
-                    Let's Talk
-                  </motion.a>
                 </div>
               </div>
             </motion.div>
