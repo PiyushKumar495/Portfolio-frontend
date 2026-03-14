@@ -83,7 +83,7 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-8xl font-bold mb-6 leading-tight"
+            className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
           >
             <span className="block text-gradient animate-gradient bg-[length:200%_auto]">{profile.name}</span>
           </motion.h1>
