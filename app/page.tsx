@@ -12,7 +12,6 @@ import SkillsSectionPremium from '@/components/SkillsSectionPremium';
 import AchievementsSection from '@/components/AchievementsSection';
 import CertificationsSection from '@/components/CertificationsSection';
 import EducationSection from '@/components/EducationSection';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -77,7 +76,6 @@ export default function Home() {
       <AchievementsSection achievements={achievements} />
       <CertificationsSection certifications={certifications} />
       <EducationSection education={education} />
-      <ContactSection />
       <Footer profile={profile} />
     </main>
   );
