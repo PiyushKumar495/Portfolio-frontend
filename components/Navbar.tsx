@@ -67,7 +67,7 @@ export default function Navbar() {
             </motion.a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-2 mx-auto">
               {navItems.map((item, index) => {
                 const isActive = activeSection === item.href.substring(1);
                 return (
