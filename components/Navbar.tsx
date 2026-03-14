@@ -31,6 +31,7 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
+    { name: 'Home', href: 'https://portfolio-3d-car.vercel.app/' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
