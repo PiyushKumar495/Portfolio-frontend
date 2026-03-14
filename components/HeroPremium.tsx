@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Phone, Sparkles, Code2, Rocket, Download, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Sparkles, Code2, Download, ArrowDown } from 'lucide-react';
 import type { Profile } from '@/types';
 
 export default function HeroPremium({ profile }: { profile: Profile }) {
@@ -152,15 +152,16 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
             className="flex gap-4 justify-center flex-wrap mb-12"
           >
             <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(139, 92, 246, 0.6)' }}
+              href={profile.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 rounded-xl font-semibold transition-all flex items-center gap-3 shadow-lg shadow-purple-500/50"
+              className="px-8 py-4 glass-strong hover:bg-white/15 rounded-xl font-semibold transition-all flex items-center gap-3 border border-purple-500/30"
             >
-              <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              Let&apos;s Build Together
+              <Linkedin className="w-5 h-5" />
+              LinkedIn
             </motion.a>
-            
             <motion.a
               href={profile.gitHub}
               target="_blank"
@@ -172,7 +173,27 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
               <Github className="w-5 h-5" />
               View GitHub
             </motion.a>
-            
+            <motion.a
+            href={`mailto:${profile.email}`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-4 glass-strong hover:bg-white/15 rounded-xl font-semibold transition-all flex items-center gap-3 border border-purple-500/30"
+            >
+            <Mail className="w-5 h-5" />
+            {profile.email}
+            </motion.a>
+
+            {profile.phone && (
+            <motion.a
+            href={`tel:${profile.phone}`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-4 glass-strong hover:bg-white/15 rounded-xl font-semibold transition-all flex items-center gap-3 border border-purple-500/30"
+            >
+            <Phone className="w-5 h-5" />
+            {profile.phone}
+            </motion.a>
+            )}
             <motion.a
               href="/resume/Piyush_Kumar_Resume.pdf"
               download
@@ -184,45 +205,6 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
               Resume
             </motion.a>
           </motion.div>
-
-          {/* Contact links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4 }}
-            className="flex gap-6 justify-center text-gray-400"
-          >
-            <motion.a
-              href={profile.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -3, color: '#8b5cf6' }}
-              className="hover:text-purple-400 transition-all flex items-center gap-2 group"
-            >
-              <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              <span className="hidden sm:inline">LinkedIn</span>
-            </motion.a>
-            <motion.a
-              href={`mailto:${profile.email}`}
-              whileHover={{ y: -3, color: '#8b5cf6' }}
-              className="hover:text-purple-400 transition-all flex items-center gap-2 group"
-            >
-              <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              <span className="hidden sm:inline">{profile.email}</span>
-            </motion.a>
-            {profile.phone && (
-              <motion.a
-                href={`tel:${profile.phone}`}
-                whileHover={{ y: -3, color: '#8b5cf6' }}
-                className="hover:text-purple-400 transition-all flex items-center gap-2 group"
-              >
-                <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="hidden sm:inline">{profile.phone}</span>
-              </motion.a>
-            )}
-          </motion.div>
-        </div>
-      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
