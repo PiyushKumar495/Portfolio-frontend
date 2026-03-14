@@ -14,7 +14,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 50);
       
       // Track active section
-      const sections = ['experience', 'projects', 'skills', 'achievements', 'certifications', 'education', 'contact'];
+      const sections = ['experience', 'projects', 'skills', 'achievements', 'certifications', 'education'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -37,7 +37,6 @@ export default function Navbar() {
     { name: 'Achievements', href: '#achievements' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Education', href: '#education' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   return (
