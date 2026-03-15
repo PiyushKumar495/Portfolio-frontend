@@ -210,14 +210,16 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
 
       {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ 
-          opacity: { delay: 1.6 },
-          y: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
-        }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
-        onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.6 }}
+      className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
+      onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        className="flex flex-col items-center gap-2"
       >
         <span className="text-sm text-gray-500 font-medium">Scroll to explore</span>
         <div className="w-6 h-10 border-2 border-purple-500/50 rounded-full flex justify-center p-2">
@@ -229,6 +231,8 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
         </div>
         <ArrowDown className="w-5 h-5 text-purple-500 animate-bounce" />
       </motion.div>
+    </motion.div>
+
     </section>
   );
 }
