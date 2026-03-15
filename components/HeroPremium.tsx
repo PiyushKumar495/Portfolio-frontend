@@ -216,7 +216,7 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
           opacity: { delay: 1.6 },
           y: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
         }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
         onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <span className="text-sm text-gray-500 font-medium">Scroll to explore</span>
