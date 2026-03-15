@@ -149,7 +149,7 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="flex gap-4 justify-center flex-wrap mb-24"
+            className="flex gap-4 justify-center flex-wrap mb-36"
           >
             <motion.a
               href={profile.linkedIn}
