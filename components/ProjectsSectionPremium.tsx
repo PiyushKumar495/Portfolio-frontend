@@ -40,7 +40,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -50,7 +50,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
                 onClick={() => handleProjectClick(project)}
-                className="glass-strong rounded-2xl overflow-hidden group cursor-pointer relative"
+                className="glass-strong rounded-2xl overflow-hidden group cursor-pointer relative w-full max-w-sm"
               >
                 {/* Featured badge */}
                 {project.featured && (
