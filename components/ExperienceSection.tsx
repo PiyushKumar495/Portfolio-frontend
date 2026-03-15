@@ -97,7 +97,7 @@ export default function ExperienceSection({ experiences }: { experiences: Experi
                   </div>
                   
                   {/* Highlights */}
-                  <div className="space-y-3 mb-6 ml-14">
+                  <div className="space-y-3 mb-6 ">
                     {exp.highlights.map((highlight, i) => (
                       <motion.div
                         key={i}
@@ -121,7 +121,7 @@ export default function ExperienceSection({ experiences }: { experiences: Experi
                   </div>
                   
                   {/* Tech Stack */}
-                  <div className="ml-14 pt-6 border-t border-gray-700/50">
+                  <div className="pt-6 border-t border-gray-700/50">
                     <div className="flex items-center gap-2 mb-4">
                       <Sparkles className="w-4 h-4 text-accent-500" />
                       <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Technologies</span>
