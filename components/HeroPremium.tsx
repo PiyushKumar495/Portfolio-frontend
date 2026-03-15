@@ -93,7 +93,7 @@ export default function HeroPremium({ profile }: { profile: Profile }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex items-center justify-center gap-3 text-3xl md:text-4xl text-gray-300 mb-6 text-center""
+            className="flex items-center justify-center gap-3 text-3xl md:text-4xl text-gray-300 mb-6 text-center"
           >
             <div className="relative">
               <Code2 className="w-10 h-10 text-purple-500 animate-pulse" />
