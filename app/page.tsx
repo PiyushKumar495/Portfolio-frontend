@@ -55,13 +55,14 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
+   return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           className="w-16 h-16 border-4 border-accent-500 border-t-transparent rounded-full"
         />
+        <p className="text-gray-400 text-sm animate-pulse">Loading portfolio...</p>
       </div>
     );
   }
